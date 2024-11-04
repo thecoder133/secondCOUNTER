@@ -18,6 +18,13 @@ def start_counter():
 # Button that starts the counter
 if st.button("Start"):
     start_counter()
+    
+if st.button("Stop"):
+    st.session_state.is_running = False
+    
+if st.button("Reset"):
+    st.session_state.counter = 0
+    st.session_state.is_running = False
 
 # This displays the current count
 st.subheader(f"{st.session_state.counter}")
